@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct InstructionsText: View {
+public struct InstructionsText: View {
     let text: String
     
-    var body: some View {
+    public var body: some View {
         Text(text.uppercased())
             .bold()
             .multilineTextAlignment(.center)
@@ -21,10 +21,10 @@ struct InstructionsText: View {
     }
 }
 
-struct BigNumberText: View {
+public struct BigNumberText: View {
     var text: String
     
-    var body: some View {
+    public var body: some View {
         Text(text)
             .kerning(-1.0)
             .font(.largeTitle)
@@ -32,10 +32,10 @@ struct BigNumberText: View {
     }
 }
 
-struct LabelText: View {
+public struct LabelText: View {
     let text: String
     
-    var body: some View {
+    public var body: some View {
         Text(text.uppercased())
             .kerning(1.5)
             .font(.caption)
@@ -43,10 +43,10 @@ struct LabelText: View {
     }
 }
 
-struct BodyText: View {
+public struct BodyText: View {
     let text: String
     
-    var body: some View {
+    public var body: some View {
         Text(text)
             .font(.subheadline)
             .fontWeight(.semibold)
@@ -55,10 +55,10 @@ struct BodyText: View {
     }
 }
 
-struct ButtonText: View {
+public struct ButtonText: View {
     let text: String
     
-    var body: some View {
+    public var body: some View {
         Text(text)
             .padding()
             .font(.headline)
@@ -72,10 +72,10 @@ struct ButtonText: View {
     }
 }
 
-struct SalaryText: View {
+public struct SalaryText: View {
     let score: Int
     
-    var body: some View {
+    public var body: some View {
         Text(String(score))
             .bold()
             .kerning(-0.2)
