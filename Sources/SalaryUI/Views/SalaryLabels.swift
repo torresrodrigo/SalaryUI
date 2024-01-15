@@ -10,6 +10,10 @@ import SwiftUI
 public struct InstructionsText: View {
     let text: String
     
+    public init(text: String) {
+        self.text = text
+    }
+    
     public var body: some View {
         Text(text.uppercased())
             .bold()
@@ -24,6 +28,10 @@ public struct InstructionsText: View {
 public struct BigNumberText: View {
     var text: String
     
+    public init(text: String) {
+        self.text = text
+    }
+    
     public var body: some View {
         Text(text)
             .kerning(-1.0)
@@ -34,6 +42,10 @@ public struct BigNumberText: View {
 
 public struct LabelText: View {
     let text: String
+    
+    public init(text: String) {
+        self.text = text
+    }
     
     public var body: some View {
         Text(text.uppercased())
@@ -46,6 +58,10 @@ public struct LabelText: View {
 public struct BodyText: View {
     let text: String
     
+    public init(text: String) {
+        self.text = text
+    }
+    
     public var body: some View {
         Text(text)
             .font(.subheadline)
@@ -57,6 +73,10 @@ public struct BodyText: View {
 
 public struct ButtonText: View {
     let text: String
+    
+    public init(text: String) {
+        self.text = text
+    }
     
     public var body: some View {
         Text(text)
@@ -73,10 +93,14 @@ public struct ButtonText: View {
 }
 
 public struct SalaryText: View {
-    let score: Int
+    let salary: Int
+    
+    public init(salary: Int) {
+        self.salary = salary
+    }
     
     public var body: some View {
-        Text(String(score))
+        Text(String(salary))
             .bold()
             .kerning(-0.2)
             .font(.title3)
@@ -91,7 +115,7 @@ struct TextViewPreview: View {
             LabelText(text: "Score")
             BodyText(text: "You scored 200 points\n 😻")
             ButtonText(text: "Start New Round")
-            SalaryText(score: 200)
+            SalaryText(salary: 200)
         }
         .padding()
         .previewDevice("Iphone 14")
